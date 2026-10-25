@@ -48,7 +48,7 @@ jobs:
           if [ ! -f debian/kernel-info.mk ]; then
             cp -v /usr/share/linux-packaging-snippets/kernel-info.mk.example debian/kernel-info.mk
           fi
-          echo 13 > debian/compat
+          # echo 13 > debian/compat
           echo "3.0 (native)" > debian/source/format
           if [ ! -f debian/rules ]; then
             printf "#!/usr/bin/make -f\n\ninclude /usr/share/linux-packaging-snippets/kernel-snippet.mk\n\n%%:\n\tdh \$@\n" > debian/rules
