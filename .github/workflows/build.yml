@@ -39,6 +39,8 @@ jobs:
             bash -c '
           set -e
           apt install linux-packaging-snippets
+          chmod +x debian/rules
+          debian/rules debian/control
           RELENG_HOST_ARCH="arm64" releng-build-package
             '
 
