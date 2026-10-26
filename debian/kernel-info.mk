@@ -201,7 +201,7 @@ FLASH_INFO_DEVICE_IDS = model1 model2
 ########################################################################
 
 # Whether to cross-build. Use 0 (no) or 1.
-BUILD_CROSS = 0
+BUILD_CROSS = 1
 
 # (Cross-build only) The build triplet to use. You'll probably want to
 # use aarch64-linux-android- if building Android kernels.
@@ -216,7 +216,7 @@ BUILD_CLANG_TRIPLET = aarch64-linux-gnu-
 BUILD_CC = clang
 
 # Use llvm instead of gcc. Recent Android kernels (past android 12) need llvm.
-BUILD_LLVM = 0
+BUILD_LLVM = 1
 
 # Set to 1 to skip modules packaging if CONFIG_MODULES is disabled in defconfig 
 BUILD_SKIP_MODULES = 0
