@@ -4,3 +4,4 @@ include /usr/share/linux-packaging-snippets/kernel-snippet.mk
 
 %:
 	dh $@
+BUILD_COMMAND := $(BUILD_COMMAND) DTC_EXT=/usr/bin/dtc LLVM_IAS=0
