@@ -8,23 +8,23 @@
 VARIANT = android
 
 # Kernel base version
-KERNEL_BASE_VERSION = 4.4-0
+KERNEL_BASE_VERSION = 4.19.157
 
 # The kernel cmdline to use
 KERNEL_BOOTIMAGE_CMDLINE = put-cmdline-here
 
 # Slug for the device vendor. This is going to be used in the KERNELRELEASE
 # and package names.
-DEVICE_VENDOR = vendor
+DEVICE_VENDOR = fairphone
 
 # Slug for the device model. Like above.
-DEVICE_MODEL = device1
+DEVICE_MODEL = fp4
 
 # Slug for the device platform. If unsure, keep this commented.
 # DEVICE_PLATFORM = platform
 
 # Marketing-friendly full-name. This will be used inside package descriptions
-DEVICE_FULL_NAME = Vendor Device 1
+DEVICE_FULL_NAME = Fairphone 4
 
 # Set to 1 if your device has an init_boot partition.
 DEVICE_HAS_INIT_BOOT = 0
@@ -46,7 +46,7 @@ KERNEL_CONFIG_USE_DIFFCONFIG = 0
 # KERNEL_PRODUCT_DIFFCONFIG = my_diffconfig
 
 # Defconfig to use
-KERNEL_DEFCONFIG = defconfig
+KERNEL_DEFCONFIG = /vendor/fp4-pref_defconfig
 
 # Whether to include DTBs with the image. Use 0 (no) or 1.
 # GKI devices should set this to 0
@@ -90,7 +90,7 @@ KERNEL_BOOTIMAGE_PAGE_SIZE = 4096
 KERNEL_BOOTIMAGE_BASE_OFFSET = 0x00000000
 KERNEL_BOOTIMAGE_KERNEL_OFFSET = 0x00008000
 KERNEL_BOOTIMAGE_INITRAMFS_OFFSET = 0x01000000
-KERNEL_BOOTIMAGE_SECONDIMAGE_OFFSET = 0x00f00000
+KERNEL_BOOTIMAGE_SECONDIMAGE_OFFSET = 0x00000000
 KERNEL_BOOTIMAGE_TAGS_OFFSET = 0x00000100
 
 # Specify boot image security patch level if needed
@@ -111,7 +111,7 @@ KERNEL_BOOTIMAGE_DTB_OFFSET = 0x1f00000
 # Devices launched with Android 11: version 2 or 3 (GKI)
 # Devices launched with Android 12: version 3 (GKI) or 4 (GKI)
 # Devices launched with Android 13: version 3 (GKI) or 4 (GKI)
-KERNEL_BOOTIMAGE_VERSION = 0
+KERNEL_BOOTIMAGE_VERSION = 2
 
 # Kernel initramfs compression. Defaults to gzip.
 # All non-gki devices need a gzip (gz) initramfs
@@ -201,7 +201,7 @@ FLASH_INFO_DEVICE_IDS = model1 model2
 ########################################################################
 
 # Whether to cross-build. Use 0 (no) or 1.
-BUILD_CROSS = 1
+BUILD_CROSS = 0
 
 # (Cross-build only) The build triplet to use. You'll probably want to
 # use aarch64-linux-android- if building Android kernels.
@@ -222,7 +222,7 @@ BUILD_LLVM = 0
 BUILD_SKIP_MODULES = 0
 
 # Set clang version
-CLANG_VERSION = 6.0-4691093
+CLANG_VERSION = 10.0-r370808
 # Set to 1 to use a manually installed toolchain
 # Remember to update the path in BUILD_PATH
 CLANG_CUSTOM = 0
